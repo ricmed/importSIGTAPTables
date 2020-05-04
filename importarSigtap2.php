@@ -43,21 +43,13 @@ require_once('import_sigtap_rl_procedimento_renases.php');
 require_once('import_sigtap_rl_procedimento_tuss.php');
 
 //header('Content-Type: text/html; charset=utf-8');
-	$host="192.168.14.50";
+	$host="";
 	$port=3306;
 	$socket="";
-	$user="sishrasdev";
-	$password="97ramqui";
-	$dbname="sishras";
+	$user="";
+	$password="";
+	$dbname="";
 
-/*
-$host="sishras.myscriptcase.com";
-$port=3306;
-$socket="";
-$user="sishrasm_user";
-$password="97RAMqui";
-$dbname = "sishrasm_sishras";
-*/
 
 $conn = new mysqli($host, $user, $password, $dbname, $port, $socket) or die ('Erro na conexão' . mysqli_connect_error($conn));
 import_sigtap_tb_grupo($conn);
